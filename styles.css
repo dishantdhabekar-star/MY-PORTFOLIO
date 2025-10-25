@@ -1,0 +1,117 @@
+
+/*
+FILE: styles.css
+Place this file in the same folder as index.html
+*/
+
+:root{
+  --bg:#0f1720;
+  --card:#0f1720;
+  --muted: #9aa6a3;
+  --accent-1: 36, 199, 139; /* green */
+  --accent-2: 255, 126, 44; /* orange */
+  --glass: rgba(255,255,255,0.06);
+  --radius: 14px;
+  --container: 1100px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{scroll-behavior:smooth; height:100%}
+body{
+  margin:0;
+  background: radial-gradient(1200px 500px at 10% 10%, rgba(var(--accent-1),0.07), transparent),
+              radial-gradient(900px 400px at 90% 90%, rgba(var(--accent-2),0.04), transparent),
+              linear-gradient(180deg,#0b1220 0%, #081018 100%);
+  color:#e6f3ef;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+.container{max-width:var(--container);margin:0 auto;padding:2rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.site-header{position:sticky;top:0;backdrop-filter:blur(6px);background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.12));border-bottom:1px solid rgba(255,255,255,0.03);z-index:40}
+.logo{font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:rgb(var(--accent-2));margin-left:6px}
+.nav{display:flex;gap:1rem}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav a:hover{color:#fff;background:rgba(255,255,255,0.02)}
+.menu-btn{display:none;background:none;border:0;color:var(--muted);font-size:1.25rem}
+.cta{background:linear-gradient(90deg, rgba(var(--accent-1),0.12), rgba(var(--accent-2),0.08));padding:8px 12px;border-radius:10px}
+
+/* HERO */
+.hero{padding:5rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:center}
+.hero-text h1{font-size:2.4rem;margin:0}
+.hero-text .accent{background:linear-gradient(90deg, rgb(var(--accent-1)), rgb(var(--accent-2)));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);margin:1rem 0 1.5rem}
+.hero-actions{display:flex;gap:0.75rem}
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;transition:transform .18s ease,box-shadow .18s ease;display:inline-block;padding:0.6rem 1rem;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.btn.primary{background:linear-gradient(90deg, rgb(var(--accent-1)), rgb(var(--accent-2)));color:#071014;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.meta{display:flex;gap:1rem;margin-top:1.25rem;color:var(--muted);list-style:none;padding:0}
+.meta li{font-size:0.95rem}
+
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1.5rem;border-radius:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.card-inner{display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.avatar{height:84px;width:84px;border-radius:14px;background:linear-gradient(180deg, rgba(var(--accent-1),0.18), rgba(var(--accent-2),0.14));display:grid;place-items:center;font-weight:700;font-size:32px;color:#06110d}
+.skills-inline{display:flex;gap:0.5rem;flex-wrap:wrap}
+.skills-inline span{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:0.85rem}
+
+.section{padding:3.25rem 0}
+.section-title{font-size:1.4rem;margin-bottom:1.25rem}
+.split{display:flex;gap:2rem;align-items:center}
+.facts{display:flex;gap:1rem}
+.fact{background:var(--glass);padding:1rem;border-radius:12px;text-align:center}
+.fact strong{display:block;font-size:1.15rem}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.project-media{height:140px;background:linear-gradient(135deg, rgba(var(--accent-1),0.12), rgba(var(--accent-2),0.08));}
+.project-body{padding:1rem}
+.proj-tags{display:flex;gap:0.5rem;margin-top:0.75rem}
+.proj-tags span{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:0.8rem}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.skill{background:var(--glass);padding:1rem;border-radius:12px}
+.skill h4{margin:0 0 0.5rem}
+.bar{height:10px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+.bar span{display:block;height:100%;width:var(--pct,50%);background:linear-gradient(90deg, rgb(var(--accent-1)), rgb(var(--accent-2)))}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem}
+.contact-form{display:flex;flex-direction:column;gap:0.75rem}
+.contact-form label{display:flex;flex-direction:column;color:var(--muted)}
+.contact-form input,.contact-form textarea{padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit}
+.form-actions{display:flex;gap:0.75rem}
+.contact-info{background:var(--glass);padding:1rem;border-radius:12px}
+.socials a{display:inline-block;margin-right:0.5rem;color:var(--muted);text-decoration:none}
+
+.site-footer{padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-links a{margin-left:1rem;color:var(--muted);text-decoration:none}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr 320px}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .header-inner{padding:0.75rem 1rem}
+  .nav{position:fixed;right:12px;top:64px;background:linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.55));padding:12px;border-radius:12px;flex-direction:column;display:none}
+  .nav.open{display:flex}
+  .menu-btn{display:block}
+  .hero-grid{grid-template-columns:1fr}
+  .hero{padding:3rem 0}
+  .projects-grid{grid-template-columns:1fr}
+  .split{flex-direction:column}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+/* small helpers */
+a{color:inherit}
+button{cursor:pointer}
+
+/* End of styles */

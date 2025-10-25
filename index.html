@@ -1,0 +1,174 @@
+
+<!--
+FILE: index.html
+This single-page portfolio uses only HTML and CSS (styles.css).
+Copy both files into the same folder and open index.html in your browser or run a simple local server.
+
+Design: green-dominant palette with orange accents, modern layout, responsive for laptop and mobile.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dishant Dhabekar — Portfolio</title>
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">MY<span>Portfolio</span></a>
+      <nav class="nav">
+        <a href="#about">Home</a>
+        <!-- <a href="#projects">Projects</a> -->
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi, I’m <span class="accent">Dishant Dhabekar</span></h1>
+          <p class="lead">I design & build modern, accessible interfaces — focused on healthcare and AI-driven products.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">See my work</a>
+            <a class="btn ghost" href="#contact">Hire me</a>
+          </div>
+          <ul class="meta">
+            <li><strong>Location</strong> India</li>
+            <li><strong>Role</strong> UI / Frontend</li>
+            <li><strong>Availability</strong> Open to work</li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <div class="card-inner">
+            <div class="avatar">D</div>
+            <h3>Designer & Front-End Dev</h3>
+            <p>Building trustworthy, human-centered healthcare experiences using modern web tech.</p>
+            <div class="skills-inline">
+              <span>HTML</span><span>CSS</span><span>JS</span><span>Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About me</h2>
+        <div class="split">
+          <div>
+            <p>I’m a UI/Frontend developer with a passion for design systems, accessibility, and building delightful experiences in the healthcare space. I enjoy turning complex problems into simple, elegant solutions.</p>
+            <p>When I’m not coding, I sketch UI ideas, explore color systems, and learn about applied AI in medicine.</p>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+          <div class="facts">
+            <div class="fact"><strong>5+</strong><span>Years experience</span></div>
+            <div class="fact"><strong>20+</strong><span>Projects</span></div>
+            <div class="fact"><strong>Healthcare</strong><span>Focus</span></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="projects-grid">
+        
+          <article class="project-card">
+            <div class="project-media"></div>
+            <div class="project-body">
+              <h3>Inditronix AI — Patient Dashboard</h3>
+              <p>Designing a clean, AI-powered patient dashboard with health summaries and predictive insights.</p>
+              <div class="proj-tags"><span>UI</span><span>Design System</span><span>Healthcare</span></div>
+            </div>
+          </article>
+
+          
+          <article class="project-card">
+            <div class="project-media"></div>
+            <div class="project-body">
+              <h3>Vitals Monitor App</h3>
+              <p>A responsive web app to visualize vitals, trends and alerts for clinicians.</p>
+              <div class="proj-tags"><span>Frontend</span><span>Accessibility</span></div>
+            </div>
+          </article>
+
+          
+          <article class="project-card">
+            <div class="project-media"></div>
+            <div class="project-body">
+              <h3>Clinical Trials Portal</h3>
+              <p>Search and filter interface for trial datasets with emphasis on discoverability.</p>
+              <div class="proj-tags"><span>Research</span><span>UX</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill"><h4>HTML & CSS</h4><div class="bar"><span style="--pct:95%"></span></div></div>
+          <div class="skill"><h4>Responsive Design</h4><div class="bar"><span style="--pct:90%"></span></div></div>
+          <div class="skill"><h4>Design Systems</h4><div class="bar"><span style="--pct:80%"></span></div></div>
+          <div class="skill"><h4>Prototyping</h4><div class="bar"><span style="--pct:75%"></span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <form class="contact-form" onsubmit="return false;">
+            <label>Name<input type="text" name="name" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Message<textarea name="message" rows="6" required></textarea></label>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send message</button>
+              <button class="btn ghost" type="reset">Reset</button>
+            </div>
+          </form>
+          <div class="contact-info">
+            <h3>Let’s build something</h3>
+            <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+            <p>LinkedIn: <a href="#">Your Profile</a></p>
+            <div class="socials">
+              <a href="#" aria-label="twitter">Twitter</a>
+              <a href="#" aria-label="github">GitHub</a>
+              <a href="#" aria-label="dribbble">Dribbble</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Dishant Dhabekar — Built with ❤️ • Responsive • HTML + CSS</p>
+      <nav class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></nav>
+    </div>
+  </footer>
+
+  <script>
+    // Small scripts: year and mobile nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
